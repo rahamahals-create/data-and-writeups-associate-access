@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data & Writeups Assistant Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <h1>AI Assistant for Data Updating & Writeups</h1>
+      <p>
+        A simple, accessible workspace to help employees plan, track, and speed up data
+        updating projects.
+      </p>
+    </header>
+
+    <main id="main" class="content" tabindex="-1">
+      <section aria-labelledby="quick-actions-title" class="card">
+        <h2 id="quick-actions-title">Quick Actions</h2>
+        <div class="grid">
+          <button type="button" class="action" data-action="data-cleanup">
+            Start Data Cleanup Plan
+          </button>
+          <button type="button" class="action" data-action="writeup-draft">
+            Create Writeup Draft
+          </button>
+          <button type="button" class="action" data-action="status-update">
+            Generate Status Update
+          </button>
+        </div>
+      </section>
+
+      <section aria-labelledby="project-form-title" class="card">
+        <h2 id="project-form-title">Project Intake</h2>
+        <form id="project-form" novalidate>
+          <div class="field">
+            <label for="project-name">Project Name</label>
+            <input id="project-name" name="projectName" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="goal">Main Goal</label>
+            <textarea id="goal" name="goal" rows="3" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority" required>
+              <option value="">Select priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit">Build AI Strategy</button>
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="strategy-title" class="card">
+        <h2 id="strategy-title">Recommended Time-Saving Strategy</h2>
+        <ul id="strategy-list">
+          <li>Capture source data owner and update frequency.</li>
+          <li>Use AI-generated templates for recurring writeups.</li>
+          <li>Automate weekly progress summaries for stakeholders.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
